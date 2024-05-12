@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Web Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS styles */
+    .carousel-item img {
+      width: 500%;
+      height: 1000px;
+    }
+    .card-img-top {
+      width: 485px;
+      height: 485px;
+    }
+    /* Custom animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .btn-primary-animated {
+      animation: pulse 1.5s infinite;
+    }
+  </style>
+</head>
+<body>
+        
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Woof & Meow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              adopt me?
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Puppy</a>
+              <a class="dropdown-item" href="#">Kitten</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Rescue Animals</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://images.unsplash.com/photo-1615233500064-caa995e2f9dd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z29sZGVuJTIwcmV0cmlldmVyJTIwcHVwcHl8ZW58MHx8MHx8fDA%3D/800x400" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/800x400" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://images.unsplash.com/photo-1621016726453-9577d93b4508?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/800x400" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- Accordion -->
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            How to Adopt a Puppy?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">1.<b>Explore Available Puppies:</b> Browse through our selection of adorable puppies available for adoption.<br/>
+
+           2.<b>Submit an Application:</b>  Fill out our simple online adoption application to express your interest in a specific puppy.<br/>
+            
+           3.<b> Meet & Greet: </b>Once your application is approved, schedule a meet-and-greet session with the puppy to ensure compatibility.<br/>
+            
+           4. <b>Home Visit (if required):</b> Some adoptions may require a home visit to ensure it's a safe environment for the puppy.<br/>
+            
+           5.<b> Finalize Adoption: </b>Complete the adoption paperwork and pay the adoption fee to bring your new furry friend home!<br/>
+            
+           6. <b>Post-Adoption Support:</b> Enjoy a lifetime of love with your new puppy, and don't hesitate to reach out for any post-adoption support or advice.<br/>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            How to Adopt a Kitten?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+           1. <b>Discover Our Feline Friends:</b>  Explore our delightful assortment of kittens eagerly awaiting their forever families.<br/>
+
+           2. <b>Submit Your Adoption Request:</b>  Take a moment to fill out our simple online adoption form to express your interest in a furry companion.<br/>
+            
+           3.<b>Schedule a Meeting:</b>  Once your request is approved, arrange a special meeting to get acquainted with the kitten and ensure a purrfect match.<br/>
+            
+           4.<b>Home Evaluation (if necessary)</b> : For some adoptions, we may conduct a brief home evaluation to ensure a safe and cozy environment for your new kitten.<br/>
+            
+           5.<b>Seal the Adoption Deal:</b>  Complete the necessary paperwork and finalize the adoption process by paying the adoption fee, officially welcoming your new whiskered friend into your heart and home!<br/>
+            
+           6.<b> Ongoing Support: </b> Enjoy continuous assistance and guidance as you and your kitten embark on this delightful journey together. We're here to provide support and answer any questions you may have along the way.<br/>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How to Adopt a Rescue Animal?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+            1. <b>Discover Our Adorable Companions:</b> Take a moment to browse through our collection of lovable rescue puppies and kittens, all seeking their forever homes.<br/>
+
+            2. <b>Express Your Interest:</b> Start the adoption process by submitting an inquiry form online. Let us know which furry friend has caught your eye and express your interest in providing them with a loving home.<br/>
+                        
+            3. <b>Arrange a Meet-Up:</b> Once we receive your inquiry, we'll schedule a meet-up where you can meet your potential new companion and see if there's a connection.<br/>
+                        
+            4. <b>Home Assessment (if necessary):</b> For some adoptions, we may conduct a brief home assessment to ensure it's a safe and suitable environment for your new furry family member.<br/>
+                        
+            5. <b>Seal the Adoption Deal:</b> Complete the necessary paperwork and finalize the adoption process by paying the adoption fee, officially welcoming your new whiskered friend into your heart and home!<br/>
+                        
+            6. <b>Ongoing Support:</b> Enjoy continuous assistance and guidance as you and your new furry friend embark on this delightful journey together. We're here to provide support and answer any questions you may have along the way.<br/>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Button with animation and action -->
+  <button type="button" class="btn btn-primary btn-lg mt-3 btn-primary-animated" data-toggle="modal" data-target="#exampleModal">
+    Click Me!
+  </button>
+
+  <!-- Cards -->
+  <div class="card-deck mt-3">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523480717984-24cba35ae1ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/300" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <h4 class="card-title"><b>Meet Our Golden Retrievers</b></h4>
+        <p class="card-text">
+            <p><b>Why Choose a Golden Retriever?</b></p>
+            <ul>
+              <li><b>Friendly and Affectionate:</b> Golden Retrievers are known for their friendly and gentle temperament, making them excellent family pets.</li>
+              <li><b>Intelligent:</b> They are highly trainable and eager to please, making them ideal for obedience training and various activities.</li>
+              <li><b>Great with Kids:</b> Golden Retrievers are patient and tolerant, making them wonderful companions for children of all ages.</li>
+              <li><b>Active Lifestyle:</b> They enjoy outdoor activities like hiking, swimming, and playing fetch, making them perfect for families who lead an active lifestyle.</li>
+              <li><b>Beautiful Appearance:</b> With their luscious golden coat and friendly expression, Golden Retrievers are not only charming but also stunning to look at.</li>
+              <li><b>Excellent Therapy Dogs:</b> Their gentle nature and intuitive understanding make them popular choices for therapy and assistance work.</li>
+            </ul>
+            <p>Consider adding a Golden Retriever to your family today and experience the joy and love they bring!</p>
+          </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585373683920-671438c82bfa?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/300" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <h4 class="card-title">Discover Our Ragdoll Beauties</h4>
+        <p class="card-text"><p><b>Why Choose a Ragdoll Cat?</b></p>
+        <ul>
+          <li><b>Gentle and Relaxed:</b> Ragdoll cats are known for their calm and placid demeanor, making them wonderful companions for families and individuals alike.</li>
+          <li><b>Docile Nature:</b> They have a sweet and gentle temperament, often going limp when held, which has earned them the nickname "Ragdoll."</li>
+          <li><b>Great with Children and Other Pets:</b> Ragdolls are typically friendly and sociable, getting along well with children, dogs, and other cats.</li>
+          <li><b>Luxurious Appearance:</b> With their striking blue eyes, silky fur, and colorpoint patterns, Ragdoll cats are not only beautiful but also captivating to behold.</li>
+          <li><b>Low Shedding:</b> Despite their long fur, Ragdolls are known for minimal shedding, making them a suitable choice for households with allergy sufferers.</li>
+          <li><b>Playful and Affectionate:</b> While they enjoy playtime, Ragdolls are also affectionate cats that love to cuddle and be close to their human companions.</li>
+        </ul>
+        <p>Ready to invite a Ragdoll cat into your life? Get ready for a purr-fect blend of cuddles, charm, and feline antics! Adopt one now and embark on a whimsical journey filled with love and delightful surprises!</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?q=80&w=1967&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/300" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <h4 class="card-title">Meet Luca: Your Loyal Companion Awaits</h4>
+        <p class="card-text"><p><b>Why Choose Luca?</b></p>
+        <ul>
+          <li><b>Loyal Guardian:</b> Luca embodies the essence of loyalty, ready to stand by your side through thick and thin. With his keen sense of awareness and protective instincts, he'll make an excellent guardian for your home and loved ones.</li>
+          <li><b>Intelligent and Trainable:</b> As a German Shepherd, Luca is highly intelligent and eager to please. He thrives on mental stimulation and is always up for learning new tricks or commands. With a bit of patience and positive reinforcement, Luca will quickly become the star pupil of your family.</li>
+          <li><b>Adventurous Spirit:</b> Luca is a spirited adventurer at heart, always ready to embark on exciting journeys by your side. Whether it's hiking through the wilderness, playing fetch in the park, or simply enjoying a leisurely stroll around the neighborhood, Luca is your perfect outdoor companion.</li>
+          <li><b>Heart of Gold:</b> Beneath his majestic exterior lies a heart of pure gold. Luca's gentle nature and affectionate soul make him a beloved member of any family. His unconditional love knows no bounds, and he's ready to shower you with endless cuddles and kisses.</li>
+        </ul>
+        <p>Take Luca home today and embark on a journey filled with love, laughter, and unforgettable memories!</p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Paws-itively Awesome: Donate to Help Pets in Need!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Donate 2$ for our charity? This would help us a lot.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Nah, next time!</button>
+          <button type="button" class="btn btn-primary" id="saveChangesBtn">Yessss</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Modal -->
+  <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thank You!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Thanks for donating.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Function to show the second modal
+    document.getElementById('saveChangesBtn').addEventListener('click', function() {
+      $('#thanksModal').modal('show');
+    });
+    $(document).ready(function(){
+    $('#saveChangesBtn').click(function(){
+      $('#exampleModal').modal('hide');
+      $('#thanksModal').modal('show');
+    });
+
+    $('#thanksModal .close').click(function(){
+      $('#exampleModal, #thanksModal').modal('hide');
+    });
+  });
+  
+  $(document).ready(function(){
+    // Initialize tooltips and popovers if used in your project
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+
+    // Function to handle showing the second modal
+    $('#saveChangesBtn').click(function(){
+      $('#exampleModal').modal('hide');
+      $('#thanksModal').modal('show');
+    });
+
+    // Function to handle hiding modals when the close button is clicked
+    $('#thanksModal .close').click(function(){
+      $('#exampleModal, #thanksModal').modal('hide');
+    });
+
+    // Function to re-enable dropdowns after they are hidden
+    $('.dropdown').on('hidden.bs.dropdown', function () {
+      $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
+    });
+
+    // Function to prevent dropdown from closing on click inside
+    $('.dropdown-menu').on('click', function (e) {
+      e.stopPropagation();
+    });
+  });
+  </script>
+</body>
+</html>
